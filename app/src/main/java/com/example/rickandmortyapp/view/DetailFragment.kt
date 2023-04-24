@@ -76,6 +76,9 @@ class DetailFragment : Fragment() {
                 for (i in it.episode)
                     episodes += i.split("/")[5] + ","
                 binding.characterEpisodes.setText(episodes)
+                binding.toggleBack.setOnClickListener {
+                    findNavController().navigate(R.id.action_detailFragment_to_homeFragment)
+                }
 
             }
 
