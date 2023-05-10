@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailFragment">
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="90dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="1dp"
+        android:text="Status:"
+        android:textSize="22sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSpecies"
+        app:layout_constraintEnd_toStartOf="@+id/characterStatus"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/characterName"
+        android:layout_width="268dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/avenir"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterImage" />
+
+    <ToggleButton
+        android:id="@+id/toggle_back"
+        android:layout_width="57dp"
+        android:layout_height="53dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/previous"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/characterImage"
+        android:layout_width="281dp"
+        android:layout_height="102dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="36dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/characterStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/characterStatus"
+        android:layout_width="187dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="68dp"
+        android:fontFamily="@font/regular"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewStatus" />
+
+    <TextView
+        android:id="@+id/characterGender"
+        android:layout_width="187dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="68dp"
+        android:fontFamily="@font/regular"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/characterOrigin"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/characterCreated"
+        android:layout_width="187dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/regular"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/characterEpisodes"
+        android:layout_width="187dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/regular"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/characterCreated"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/characterOrigin"
+        android:layout_width="187dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/regular"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/characterLocation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/characterLocation"
+        android:layout_width="187dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/regular"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/characterEpisodes"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/characterSpecy"
+        android:layout_width="187dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="68dp"
+        android:fontFamily="@font/regular"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterStatus" />
+
+    <TextView
+        android:id="@+id/textViewSpecies"
+        android:layout_width="90dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="4dp"
+        android:text="Specy:"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/characterGender"
+        app:layout_constraintEnd_toStartOf="@+id/characterSpecy"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewGender"
+        android:layout_width="90dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="4dp"
+        android:text="Gender:"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/characterSpecy"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSpecies" />
+
+    <TextView
+        android:id="@+id/textViewOrigin"
+        android:layout_width="90dp"
+        android:layout_height="31dp"
+        android:text="Origin:"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/characterSpecy"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGender" />
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="90dp"
+        android:layout_height="31dp"
+        android:text="Location:"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/characterSpecy"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOrigin" />
+
+    <TextView
+        android:id="@+id/textViewEpisodes"
+        android:layout_width="110dp"
+        android:layout_height="31dp"
+        android:text="Episodes:"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/characterSpecy"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLocation" />
+
+    <TextView
+        android:id="@+id/textViewCreated"
+        android:layout_width="125dp"
+        android:layout_height="57dp"
+        android:text="Created at \n(in API):"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/characterCreated"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEpisodes" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

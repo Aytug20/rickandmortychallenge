@@ -3,6 +3,7 @@ package com.example.rickandmortyapp.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.rickandmortyapp.R
 import com.example.rickandmortyapp.databinding.RowLayoutBinding
 import com.example.rickandmortyapp.model.CharacterModel
 import com.example.rickandmortyapp.util.downloadImage
@@ -11,6 +12,12 @@ class CharacterRecyclerViewAdapter(
     private var characterList: ArrayList<CharacterModel>,
     private val listener: Listener
 ) : RecyclerView.Adapter<CharacterRecyclerViewAdapter.RowHolder>() {
+
+    private val icons = arrayOf(
+        R.drawable.femenine,
+        R.drawable.mars,
+    )
+
     fun submitList(list: ArrayList<CharacterModel>) {
         this.characterList = list
         notifyDataSetChanged()
@@ -26,6 +33,7 @@ class CharacterRecyclerViewAdapter(
             binding.textName.text = model.name
             binding.textGender.text = model.gender
             binding.imageView.downloadImage(model.image)
+
         }
     }
 
